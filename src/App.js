@@ -67,12 +67,12 @@ class App extends React.Component {
   getWeather = async (e) => {
     e.preventDefault();
 
-    const country = e.target.elements.country;
-    const city = e.target.elements.city;
+    const country = e.target.elements.country.value;
+    const city = e.target.elements.city.value;
 
-    if (country && city) {
+    if (country || city) {
       const api_call = await fetch(
-        `HTTPS://api.openweathermap.org/data/2.5/weather?q=London&appid=${API_Key}`
+        `HTTPS://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=imperial&appid=${API_Key}`
       );
 
       const response = await api_call.json();

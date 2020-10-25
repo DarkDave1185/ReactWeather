@@ -12,14 +12,14 @@ const Form = (props) => {
               className="form-control"
               name="city"
               autoComplete="off"
-              placeholder="city"
+              placeholder="City"
             />
           </div>
           <div className="">
             <input
               type="text"
               className="form-control"
-              name="city"
+              name="country"
               autoComplete="off"
               placeholder="Country"
             />
